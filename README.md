@@ -1,38 +1,46 @@
 # 🚀 Aplikasi Laravel - [Kliping Berta Otomatis]
 
 [![Laravel](https://img.shields.io/badge/Laravel-Framework-red)](https://laravel.com/)
-[![PHP](https://img.shields.io/badge/PHP-8.1-blue)](https://www.php.net/)
-[![MySQL](https://img.shields.io/badge/Database-MySQL-blue)](https://www.mysql.com/)
-[![Composer](https://img.shields.io/badge/Composer-Dependency_Manager-orange)](https://getcomposer.org/)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-IndoBERT-yellow)](https://huggingface.co/)
+[![Python](https://img.shields.io/badge/Python-3.9-blue)](https://www.python.org/)
+
+## 🧠 Model
+
+Model yang digunakan adalah IndoBERT yang telah di-fine-tune untuk **analisis sentimen berita**.  
+Model ini dapat diunduh langsung dari **Hugging Face Hub**.  
 
 ---
 
-## 📚 Framework & Tools
-
-- [Laravel](https://laravel.com/) - PHP Framework
-- [Composer](https://getcomposer.org/) - PHP Dependency Manager
-- [MySQL](https://www.mysql.com/) - Database
-- [PHP 8+](https://www.php.net/) - Bahasa Pemrograman
+## 📚 Library & Framework
+ 
+- [Python](https://www.python.org/)  
+- [Transformers (Hugging Face)](https://huggingface.co/transformers/)  
+- [Torch](https://pytorch.org/)  
+- [Pandas, NumPy, scikit-learn, matplotlib](https://scikit-learn.org/stable/)  
 
 ---
 
-## ⚙️ Cara Menjalankan Project Laravel Ini
+## ⚙️ Cara Menjalankan Sistem (Lokal)
 
 1. **Clone repo ini:**
    ```bash
-   git clone https://github.com/DewaMahattama/e-kliping-otomatis
-   cd e-kliping-otomatis
-2. **Buat Virtual Enviorment** 
-    ```bash
-    python -m venv venv
-    source venv/bin/activate   # Linux / MacOS
-    venv\Scripts\activate      # Windows
-2. **Install Dependensi ini:**
+   git clone https://github.com/DewaMahattama/sentiment-api
+   cd sentiment-api
+2. **Install Depedensi Laravel:** 
    ```bash
-   pip install -r requirements.txt
-4. **Ganti model_path**
+    composer install
+3. **Install Dependency Frontend (Vite/NPM)**
    ```bash
-   model dapat diakses: yeaylow/analisis-berita-indobertp2
-3. **Jalankan Rest API**
+   npm install
+   npm run dev
+2. **Copy dan Konfigurasi File Enviorment:**
    ```bash
-   python app.py
+   cp .env.example .env
+   Lalu edit file .env dan sesuaikan konfigurasi database dan lainnya:
+4. **Generate Key Aplikasi:**
+   ```bash
+   php artisan key:generate
+3. **Jalankan Server:**
+   ```bash
+   php artisan serve
+
